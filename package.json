@@ -1,0 +1,21 @@
+{
+  "name": "winston-loggly",
+  "description": "A Loggly transport for winston",
+  "version": "0.5.0",
+  "author": "Charlie Robbins <charlie.robbins@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/indexzero/winston-loggly.git" 
+  },
+  "keywords": ["logging", "sysadmin", "tools"],
+  "dependencies": {
+    "async": "0.1.x",
+    "loggly": "0.3.x >=0.3.7"
+  },
+  "devDependencies": {
+    "vows": "0.5.x >=0.5.11"
+  },
+  "main": "./lib/winston-loggly",
+  "scripts": { "test": "vows --spec --isolate" },
+  "engines": { "node": ">= 0.4.0" }
+}
