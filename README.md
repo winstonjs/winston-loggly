@@ -39,11 +39,11 @@ The [winston][1] codebase has been growing significantly with contributions and 
   $ curl http://npmjs.org/install.sh | sh
 ```
 
-### Installing winston-riak
+### Installing winston-loggly
 
 ``` bash
   $ npm install winston
-  $ npm install winston-riak
+  $ npm install winston-loggly
 ```
 
 ## Run Tests
