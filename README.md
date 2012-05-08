@@ -71,6 +71,7 @@ Once you have valid configuration and credentials you can run tests with [npm][7
 ```
 
 #### Author: [Charlie Robbins](http://blog.nodejitsu.com)
+#### License: MIT
 
 [0]: http://loggly.com
 [1]: https://github.com/flatiron/winston
