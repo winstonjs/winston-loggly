@@ -9,7 +9,6 @@
   },
   "keywords": ["logging", "sysadmin", "tools"],
   "dependencies": {
-    "async": "0.1.x",
     "loggly": "0.3.x >=0.3.7"
   },
   "devDependencies": {
