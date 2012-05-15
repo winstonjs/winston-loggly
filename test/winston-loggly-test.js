@@ -55,6 +55,13 @@ vows.describe('winston-loggly').addBatch({
       })
     },
     "when passed an input name": {
+      topic: function () {
+        if (nameTransport.ready) {
+          return null;
+        }
+        
+        nameTransport.once('ready', this.callback);
+      },
       "should have the proper methods defined": function () {
         assertLoggly(nameTransport);
       },
