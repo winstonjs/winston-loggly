@@ -22,6 +22,7 @@ The Loggly transport is based on [Nodejitsu's][2] [node-loggly][3] implementatio
 * __auth__: The authentication information for your Loggly account. *[required with inputName]*
 * __inputName:__ The name of the input this instance should log to.
 * __inputToken:__ The input token of the input this instance should log to.
+* __inputUrl:__ The Loggly API url *[not required for Loggly V1, https://logs-01.loggly.com/inputs/ for Loggly V2]*.
 * __json:__ If true, messages will be sent to Loggly as JSON.
 
 *Metadata:* Logged in suggested [Loggly format][5]
@@ -55,6 +56,7 @@ All of the winston tests are written in [vows][6], and cover all of the use case
       "loggly": {
         "subdomain": "your-subdomain",
         "inputToken": "really-long-token-you-got-from-loggly",
+        "inputName": "your-input-name",
         "auth": {
           "username": "your-username",
           "password": "your-password"

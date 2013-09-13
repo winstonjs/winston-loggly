@@ -3,6 +3,7 @@
     "loggly": {
       "subdomain": "your-subdomain",
       "inputToken": "really-long-token-you-got-from-loggly",
+      "inputName": "your-input-name",
       "auth": {
         "username": "your-username",
         "password": "your-password"
