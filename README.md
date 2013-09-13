@@ -55,6 +55,7 @@ All of the winston tests are written in [vows][6], and cover all of the use case
       "loggly": {
         "subdomain": "your-subdomain",
         "inputToken": "really-long-token-you-got-from-loggly",
+        "inputName": "your-input-name",
         "auth": {
           "username": "your-username",
           "password": "your-password"
