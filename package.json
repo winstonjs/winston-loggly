@@ -9,11 +9,14 @@
   },
   "keywords": ["logging", "sysadmin", "tools"],
   "dependencies": {
-    "loggly": "0.3.x >=0.3.7"
+    "loggly": "1.0.x"
+  },
+  "peerDependencies": {
+    "winston": "~0.7.2"
   },
   "devDependencies": {
-    "winston": "0.5.x",
-    "vows": "0.5.x >=0.5.11"
+    "winston": "0.7.x",
+    "vows": "0.7.x"
   },
   "main": "./lib/winston-loggly",
   "scripts": { "test": "vows --spec" },
