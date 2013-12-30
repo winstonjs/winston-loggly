@@ -14,7 +14,6 @@ var path = require('path'),
     Loggly = require('../lib/winston-loggly').Loggly;
 
 var tokenTransport,
-    nameTransport,
     config;
 
 try {
@@ -27,20 +26,14 @@ catch (ex) {
   process.exit(1);
 }
 
-tokenTransport = new (Loggly)({ 
+tokenTransport = new (Loggly)({
   subdomain: config.transports.loggly.subdomain,
-  inputToken: config.transports.loggly.inputToken
-});
-
-nameTransport = new (Loggly)({ 
-  subdomain: config.transports.loggly.subdomain,
-  inputName: config.transports.loggly.inputName,
-  auth: config.transports.loggly.auth
+  token: config.transports.loggly.token
 });
 
 function assertLoggly(transport) {
   assert.instanceOf(transport, Loggly);
-  assert.isFunction(transport.log);  
+  assert.isFunction(transport.log);
 }
 
 vows.describe('winston-loggly').addBatch({
@@ -52,22 +45,6 @@ vows.describe('winston-loggly').addBatch({
       "the log() method": helpers.testNpmLevels(tokenTransport, "should log messages to loggly", function (ign, err, logged) {
         assert.isNull(err);
         assert.isTrue(logged);
-      })
-    },
-    "when passed an input name": {
-      topic: function () {
-        if (nameTransport.ready) {
-          return null;
-        }
-        
-        nameTransport.once('ready', this.callback);
-      },
-      "should have the proper methods defined": function () {
-        assertLoggly(nameTransport);
-      },
-      "the log() method": helpers.testNpmLevels(nameTransport, "should log messages to loggly", function (ign, err, result) {
-        assert.isNull(err);
-        assert.isTrue(result === true || result.response === 'ok');
       })
     }
   }
