@@ -12,7 +12,7 @@
     "loggly": "1.0.x"
   },
   "peerDependencies": {
-    "winston": "~0.7.2"
+    "winston": "0.x.x"
   },
   "devDependencies": {
     "winston": "0.7.x",
