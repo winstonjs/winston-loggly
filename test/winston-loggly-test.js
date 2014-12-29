@@ -11,16 +11,15 @@ var path = require('path'),
     assert = require('assert'),
     winston = require('winston'),
     helpers = require('winston/test/helpers'),
-    Loggly = require('../lib/winston-loggly').Loggly;
-
-var tokenTransport,
+    Loggly = require('../lib/winston-loggly').Loggly,
+    tokenTransport,
     config;
 
 try {
   config = require('./config');
 }
 catch (ex) {
-  console.log('Error reading test/config.json.')
+  console.log('Error reading test/config.json.');
   console.log('Are you sure it exists?\n');
   console.dir(ex);
   process.exit(1);
