@@ -11,14 +11,11 @@
   "dependencies": {
     "loggly": "1.0.x"
   },
-  "peerDependencies": {
-    "winston": "0.x.x"
-  },
   "devDependencies": {
-    "winston": "0.7.x",
-    "vows": "0.7.x"
+    "winston": "1.0.x",
+    "vows": "0.8.0"
   },
   "main": "./lib/winston-loggly",
   "scripts": { "test": "vows --spec" },
-  "engines": { "node": ">= 0.4.0" }
+  "engines": { "node": ">= 0.8.0" }
 }
