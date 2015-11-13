@@ -24,7 +24,6 @@ The Loggly transport is based on [Nodejitsu's][2] [node-loggly][3] implementatio
 * __inputToken:__ The input token of the input this instance should log to.
 * __json:__ If true, messages will be sent to Loggly as JSON.
 * __tags:__ An array of tags to send to loggly.
-* __host:__ Destination server.
 * __isBulk:__ If true, sends messages using bulk url
 * __stripColors:__ Strip color codes from the logs before sending
 
