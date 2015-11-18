@@ -82,6 +82,6 @@ Once you have valid configuration and credentials you can run tests with [npm][7
 [2]: http://nodejitsu.com
 [3]: https://github.com/nodejitsu/node-loggly
 [4]: http://www.loggly.com/product/
-[5]: http://wiki.loggly.com/loggingfromcode
+[5]: http://www.loggly.com/docs/automated-parsing/
 [6]: http://vowsjs.org
 [7]: http://npmjs.org
