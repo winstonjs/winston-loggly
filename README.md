@@ -26,6 +26,7 @@ The Loggly transport is based on [Nodejitsu's][2] [node-loggly][3] implementatio
 * __tags:__ An array of tags to send to loggly.
 * __isBulk:__ If true, sends messages using bulk url
 * __stripColors:__ Strip color codes from the logs before sending
+* __metaKey:__ If defined, keys from the meta parameter are written to the loggly message under this key rather than at the top level
 
 
 *Metadata:* Logged in suggested [Loggly format][5]
