@@ -1,4 +1,4 @@
-# winston-loggly
+# winston-loggly-bulk
 
 A [Loggly][0] transport for [winston][1].
 
@@ -10,7 +10,7 @@ A [Loggly][0] transport for [winston][1].
   // Requiring `winston-loggly` will expose
   // `winston.transports.Loggly`
   //
-  require('winston-loggly');
+  require('winston-loggly-bulk');
 
   winston.add(winston.transports.Loggly, options);
 ```
