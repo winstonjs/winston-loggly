@@ -2,6 +2,13 @@
 
 A [Loggly][0] transport for [winston][1].
 
+[![Version npm](https://img.shields.io/npm/v/winston-loggly-bulk.svg?style=flat-square)](https://www.npmjs.com/package/winston-loggly-bulk)[![npm Downloads](https://img.shields.io/npm/dm/winston-loggly-bulk.svg?style=flat-square)](https://www.npmjs.com/package/winston-loggly-bulk)
+
+[![NPM](https://nodei.co/npm/winston-loggly-bulk.png?downloads=true&downloadRank=true)](https://nodei.co/npm/winston-loggly-bulk/)
+
+A client implementation for Loggly in node.js. Check out Loggly's [Node logging documentation](https://www.loggly.com/docs/nodejs-logs/) for more.
+
+
 ## Usage
 ``` js
   var winston = require('winston');
@@ -47,7 +54,7 @@ The [winston][1] codebase has been growing significantly with contributions and 
 
 ``` bash
   $ npm install winston
-  $ npm install winston-loggly
+  $ npm install winston-loggly-bulk
 ```
 
 ## Run Tests
