@@ -9,7 +9,8 @@
   },
   "keywords": ["logging", "sysadmin", "tools"],
   "dependencies": {
-    "loggly": "~1.1.0"
+    "loggly": "~1.1.0",
+    "cycle": "1.0.x"
   },
   "devDependencies": {
     "winston": "1.0.x",
