@@ -1,6 +1,6 @@
 {
-  "name": "loggly-bulk",
-  "version": "1.0.4",
+  "name": "loggly-winston-bulk",
+  "version": "1.0.1",
   "description": "A Loggly transport for winston",
   "author": "Shweta Jain <sjain@loggly.com>",
   "repository": {
