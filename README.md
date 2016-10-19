@@ -1,10 +1,11 @@
-# winston-loggly-bulk
+#### The original author of this library is Charlie Robbins <charlie.robbins@gmail.com>.
+# loggly-winston-bulk
 
 A [Loggly][0] transport for [winston][1].
 
-[![Version npm](https://img.shields.io/npm/v/winston-loggly-bulk.svg?style=flat-square)](https://www.npmjs.com/package/winston-loggly-bulk)[![npm Downloads](https://img.shields.io/npm/dm/winston-loggly-bulk.svg?style=flat-square)](https://www.npmjs.com/package/winston-loggly-bulk)
+[![Version npm](https://img.shields.io/npm/v/loggly-winston-bulk.svg?style=flat-square)](https://www.npmjs.com/package/loggly-winston-bulk)[![npm Downloads](https://img.shields.io/npm/dm/loggly-winston-bulk.svg?style=flat-square)](https://www.npmjs.com/package/loggly-winston-bulk)
 
-[![NPM](https://nodei.co/npm/winston-loggly-bulk.png?downloads=true&downloadRank=true)](https://nodei.co/npm/winston-loggly-bulk/)
+[![NPM](https://nodei.co/npm/loggly-winston-bulk.png?downloads=true&downloadRank=true)](https://nodei.co/npm/loggly-winston-bulk/)
 
 A client implementation for Loggly in node.js. Check out Loggly's [Node logging documentation](https://www.loggly.com/docs/nodejs-logs/) for more.
 
@@ -14,10 +15,10 @@ A client implementation for Loggly in node.js. Check out Loggly's [Node logging 
   var winston = require('winston');
 
   //
-  // Requiring `winston-loggly` will expose
+  // Requiring `loggly-winston-bulk` will expose
   // `winston.transports.Loggly`
   //
-  require('winston-loggly-bulk');
+  require('loggly-winston-bulk');
 
   winston.add(winston.transports.Loggly, options);
 ```
@@ -54,7 +55,7 @@ The [winston][1] codebase has been growing significantly with contributions and 
 
 ``` bash
   $ npm install winston
-  $ npm install winston-loggly-bulk
+  $ npm install loggly-winston-bulk
 ```
 
 ## Run Tests
@@ -81,7 +82,7 @@ Once you have valid configuration and credentials you can run tests with [npm][7
   npm test
 ```
 
-#### Author: [Charlie Robbins](http://blog.nodejitsu.com)
+#### Author: [Shweta Jain](https://www.loggly.com/)
 #### License: MIT
 
 [0]: http://loggly.com
