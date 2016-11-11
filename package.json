@@ -2,11 +2,11 @@
   "name": "winston-loggly-bulk",
   "version": "1.3.4",
   "description": "A Loggly transport for winston",
-  "author": "Loggly <sjain@loggly.com>",
+  "author": "Loggly <opensource@loggly.com>",
   "contributors": [
     {
       "name": "Loggly",
-      "email": "sjain@loggly.com",
+      "email": "opensource@loggly.com",
       "url": "https://github.com/loggly"
     },
     {
