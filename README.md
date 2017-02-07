@@ -22,6 +22,20 @@ A client implementation for Loggly in node.js. Check out Loggly's [Node logging 
   winston.add(winston.transports.Loggly, options);
 ```
 
+
+## Buffer Support
+
+This library has buffer support during temporary network outage. User can configure size of buffer (no. of logs to be stored during network outage).
+
+Add these below configuration in code snippet to override the default values of buffer option  __size__ and __retriesInMilliSeconds__.
+``` js
+bufferOptions: {
+    size: 1000,
+    retriesInMilliSeconds: 60 * 1000
+}  
+```
+* __Note:__ The default value of buffer size and retries in milliseconds are 500 and 30000 (30 seconds) respectively.
+
 The Loggly transport is based on [Nodejitsu's][2] [node-loggly][3] implementation of the [Loggly][0] API. If you haven't heard of Loggly before, you should probably read their [value proposition][4]. The Loggly transport takes the following options. Either 'inputToken' or 'inputName' is required:
 
 * __level:__ Level of messages that this transport should log.
@@ -33,7 +47,9 @@ The Loggly transport is based on [Nodejitsu's][2] [node-loggly][3] implementatio
 * __tags:__ An array of tags to send to loggly.
 * __isBulk:__ If true, sends messages using bulk url
 * __stripColors:__ Strip color codes from the logs before sending
-
+* __bufferOptions:__ Buffer options has two configurations.
+ - __size:__ Number of logs to be buffered.
+ - __retriesInMilliSeconds:__ Time in milliseconds to retry sending buffered logs. 
 
 *Metadata:* Logged in suggested [Loggly format][5]
 
