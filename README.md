@@ -22,6 +22,24 @@ A client implementation for Loggly in node.js. Check out Loggly's [Node logging 
   winston.add(winston.transports.Loggly, options);
 ```
 
+The Loggly transport is based on [Nodejitsu's][2] [node-loggly][3] implementation of the [Loggly][0] API. If you haven't heard of Loggly before, you should probably read their [value proposition][4]. The Loggly transport takes the following options. Either 'inputToken' or 'inputName' is required:
+
+* __level:__ Level of messages that this transport should log.
+* __subdomain:__ The subdomain of your Loggly account. *[required]*
+* __auth__: The authentication information for your Loggly account. *[required with inputName]*
+* __inputName:__ The name of the input this instance should log to.
+* __inputToken:__ The input token of the input this instance should log to.
+* __json:__ If true, messages will be sent to Loggly as JSON.
+* __tags:__ An array of tags to send to loggly.
+* __isBulk:__ If true, sends messages using bulk url
+* __stripColors:__ Strip color codes from the logs before sending
+* __bufferOptions:__ Buffer options has two configurations.
+  - __size:__ Number of logs to be buffered.
+  - __retriesInMilliSeconds:__ Time in milliseconds to retry sending buffered logs. 
+* __timestamp:__ If false, library will not include timestamp in log events. 
+  - __Note:__ Library includes timestamp by default when we do not set timestamp option.
+
+*Metadata:* Logged in suggested [Loggly format][5]
 
 ## Buffer Support
 
@@ -35,23 +53,6 @@ bufferOptions: {
 }  
 ```
 * __Note:__ The default value of buffer size and retries in milliseconds are 500 and 30000 (30 seconds) respectively.
-
-The Loggly transport is based on [Nodejitsu's][2] [node-loggly][3] implementation of the [Loggly][0] API. If you haven't heard of Loggly before, you should probably read their [value proposition][4]. The Loggly transport takes the following options. Either 'inputToken' or 'inputName' is required:
-
-* __level:__ Level of messages that this transport should log.
-* __subdomain:__ The subdomain of your Loggly account. *[required]*
-* __auth__: The authentication information for your Loggly account. *[required with inputName]*
-* __inputName:__ The name of the input this instance should log to.
-* __inputToken:__ The input token of the input this instance should log to.
-* __json:__ If true, messages will be sent to Loggly as JSON.
-* __tags:__ An array of tags to send to loggly.
-* __isBulk:__ If true, sends messages using bulk url
-* __stripColors:__ Strip color codes from the logs before sending
-* __bufferOptions:__ Buffer options has two configurations.
- - __size:__ Number of logs to be buffered.
- - __retriesInMilliSeconds:__ Time in milliseconds to retry sending buffered logs. 
-
-*Metadata:* Logged in suggested [Loggly format][5]
 
 ## Motivation
 `tldr;?`: To break the [winston][1] codebase into small modules that work together.
