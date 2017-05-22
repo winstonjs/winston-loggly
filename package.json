@@ -21,7 +21,7 @@
   },
   "keywords": ["loggly", "logging", "sysadmin", "tools", "winston"],
   "dependencies": {
-    "node-loggly-bulk": "~1.1.0"
+    "node-loggly-bulk": "^1.2.1"
   },
   "devDependencies": {
     "winston": "1.0.x",
