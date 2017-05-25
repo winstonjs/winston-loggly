@@ -22,7 +22,7 @@
   "keywords": ["loggly", "logging", "sysadmin", "tools", "winston"],
   "dependencies": {
     "node-loggly-bulk": "^1.2.1",
-    "winston": "^2.3.1"
+    "winston": "1.0.x"
   },
   "devDependencies": {
     "vows": "0.8.0"
