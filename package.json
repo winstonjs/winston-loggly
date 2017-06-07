@@ -1,6 +1,6 @@
 {
   "name": "winston-loggly-bulk",
-  "version": "1.4.3",
+  "version": "2.0.0",
   "description": "A Loggly transport for winston",
   "author": "Loggly <opensource@loggly.com>",
   "contributors": [
@@ -21,8 +21,8 @@
   },
   "keywords": ["loggly", "logging", "sysadmin", "tools", "winston"],
   "dependencies": {
-    "node-loggly-bulk": "^1.2.1",
-    "winston": "1.0.x"
+    "node-loggly-bulk": "^2.0.0",
+    "winston": "^2.3.1"
   },
   "devDependencies": {
     "vows": "0.8.0"
