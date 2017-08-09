@@ -17,7 +17,7 @@ A client implementation for Loggly in node.js. Check out Loggly's [Node logging 
   // Requiring `winston-loggly-bulk` will expose
   // `winston.transports.Loggly`
   //
-  require('winston-loggly-bulk');
+   require('winston-loggly-bulk');
 
   winston.add(winston.transports.Loggly, options);
 ```
@@ -56,11 +56,9 @@ bufferOptions: {
 
 ## Flush logs and exit
 
-Our library uses ajax requests to send logs to Loggly and ajax requests take time to complete, in that case if you call process.exit() externally in your application then it is certain that as soon as process.exit() will be called, your application will exit and all the queued requests will be interrupted and your application logs will also not reach to Loggly. 
+Our library uses ajax requests to send logs to Loggly, and as ajax requests take time to complete, logs can be lost when process.exit() is called because it forces an immediate exit. To exit gracefully and ensure that the last logs get to Loggly, we created a function called flushLogsAndExit(). It waits for 10 seconds and then calls process.exit() itself. This allows enough time for the logs to be sent to Loggly.
 
-To support this scenario in which you really want to call process.exit() without losting logs, we have a function called flushLogsAndExit() which waits for 10 seconds and then call process.exit() itself. By doing so, logging will be complete in given time and then your apllication will exit.
-
-You have to do something like below code snippet:
+Here is an example of how to use the method:
 
 ``` js
 var winston = require('winston'),
