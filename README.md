@@ -17,7 +17,7 @@ A client implementation for Loggly in node.js. Check out Loggly's [Node logging 
   // Requiring `winston-loggly-bulk` will expose
   // `winston.transports.Loggly`
   //
-   require('winston-loggly-bulk');
+  require('winston-loggly-bulk');
 
   winston.add(winston.transports.Loggly, options);
 ```
