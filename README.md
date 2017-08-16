@@ -54,6 +54,21 @@ bufferOptions: {
 ```
 * __Note:__ The default value of buffer size and retries in milliseconds are 500 and 30000 (30 seconds) respectively.
 
+## Flush logs and exit
+
+Our library uses ajax requests to send logs to Loggly, and as ajax requests take time to complete, logs can be lost when process.exit() is called because it forces an immediate exit. To exit gracefully and ensure that the last logs get to Loggly, we created a function called flushLogsAndExit(). It waits for 10 seconds and then calls process.exit() itself. This allows enough time for the logs to be sent to Loggly.
+
+Here is an example of how to use the method:
+
+``` js
+var winston = require('winston'),
+winlog = require('winston-loggly-bulk');
+
+winston.log("info", "hello World");
+winlog.flushLogsAndExit();
+  
+```
+
 ## Motivation
 `tldr;?`: To break the [winston][1] codebase into small modules that work together.
 
