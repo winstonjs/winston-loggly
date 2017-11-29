@@ -82,11 +82,23 @@ The [winston][1] codebase has been growing significantly with contributions and 
   $ curl http://npmjs.org/install.sh | sh
 ```
 
-### Installing winston-loggly
+### Installing winston-loggly-bulk
+
+If you are running npm version 3 or higher then run the below command to setup the logging-
 
 ``` bash
-  $ npm install winston
   $ npm install winston-loggly-bulk
+```
+
+If you are running npm version 2 or lower then run the below command to setup the logging-
+
+``` bash
+  $ npm install winston-loggly-bulk winston
+```
+* __Note:__ To check the currrent npm version run the below command-
+
+``` bash
+  $ npm -v
 ```
 
 ## Run Tests
