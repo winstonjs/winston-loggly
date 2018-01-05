@@ -13,10 +13,10 @@
     "tools"
   ],
   "dependencies": {
-    "loggly": "~1.1.0"
+    "loggly": "~1.1.0",
+    "winston": "^1.0.2"
   },
   "devDependencies": {
-    "winston": "1.0.x",
     "vows": "0.8.0"
   },
   "main": "./lib/winston-loggly",
