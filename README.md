@@ -15,6 +15,23 @@ A [Loggly][0] transport for [winston][1].
   winston.add(winston.transports.Loggly, options);
 ```
 
+Or in the winston@3.0.0-rc1:
+```js
+const winston = require('winston');
+const Loggly = require('winston-loggly');
+
+const logger = winston.createLogger({
+  level,
+  transports: [
+    new Loggly({
+      inputToken: process.env.LOGGLY_TOKEN,
+      subdomain: process.env.LOGGLY_SUBDOMAIN,
+      stripColors: true,
+    }),
+  ],
+});
+```
+
 The Loggly transport is based on [Nodejitsu's][2] [node-loggly][3] implementation of the [Loggly][0] API. If you haven't heard of Loggly before, you should probably read their [value proposition][4]. The Loggly transport takes the following options. Either 'inputToken' or 'inputName' is required:
 
 * __level:__ Level of messages that this transport should log.

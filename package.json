@@ -7,7 +7,11 @@
     "type": "git",
     "url": "http://github.com/indexzero/winston-loggly.git"
   },
-  "keywords": ["logging", "sysadmin", "tools"],
+  "keywords": [
+    "logging",
+    "sysadmin",
+    "tools"
+  ],
   "dependencies": {
     "loggly": "~1.1.0"
   },
@@ -16,6 +20,10 @@
     "vows": "0.8.0"
   },
   "main": "./lib/winston-loggly",
-  "scripts": { "test": "vows --spec" },
-  "engines": { "node": ">= 0.8.0" }
+  "scripts": {
+    "test": "vows --spec"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  }
 }
