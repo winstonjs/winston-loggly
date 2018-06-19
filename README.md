@@ -17,9 +17,9 @@ A client implementation for Loggly in node.js. Check out Loggly's [Node logging 
   // Requiring `winston-loggly-bulk` will expose
   // `winston.transports.Loggly`
   //
-  require('winston-loggly-bulk');
+  var {Loggly} = require('winston-loggly-bulk');
 
-  winston.add(winston.transports.Loggly, options);
+  winston.add(new Loggly({options}));
 ```
 
 The Loggly transport is based on [Nodejitsu's][2] [node-loggly][3] implementation of the [Loggly][0] API. If you haven't heard of Loggly before, you should probably read their [value proposition][4]. The Loggly transport takes the following options. Either 'inputToken' or 'inputName' is required:
@@ -41,6 +41,22 @@ The Loggly transport is based on [Nodejitsu's][2] [node-loggly][3] implementatio
 
 *Metadata:* Logged in suggested [Loggly format][5]
 
+## Sample Working Code Snippet
+
+``` js
+var winston  = require('winston');
+var {Loggly} = require('winston-loggly-bulk');
+
+winston.add(new Loggly({
+    token: "TOKEN",
+    subdomain: "SUBDOMAIN",
+    tags: ["Winston-NodeJS"],
+    json: true
+}));
+
+winston.log('info', "Hello World from Node.js!");
+```
+
 ## Buffer Support
 
 This library has buffer support during temporary network outage. User can configure size of buffer (no. of logs to be stored during network outage).
@@ -61,11 +77,11 @@ Our library uses ajax requests to send logs to Loggly, and as ajax requests take
 Here is an example of how to use the method:
 
 ``` js
-var winston = require('winston'),
-winlog = require('winston-loggly-bulk');
+var winston = require('winston');
+var {flushLogsAndExit} = require('winston-loggly-bulk');
 
-winston.log("info", "hello World");
-winlog.flushLogsAndExit();
+winston.log("info", "Hello World from Node.js!");
+flushLogsAndExit();
   
 ```
 
