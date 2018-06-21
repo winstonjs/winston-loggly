@@ -27,6 +27,7 @@
     "winston"
   ],
   "dependencies": {
+    "clone": "^2.1.1",
     "node-loggly-bulk": "^2.0.1",
     "winston": "^3.0",
     "winston-transport": "^4.2.0"
