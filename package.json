@@ -36,6 +36,10 @@
     "vows": "0.8.0"
   },
   "main": "./lib/winston-loggly",
-  "scripts": { "test": "vows --spec" },
-  "engines": { "node": ">= 6.4.0" }
+  "scripts": {
+    "test": "vows --spec"
+  },
+  "engines": {
+    "node": ">= 6.4.0"
+  }
 }
