@@ -1,21 +1,45 @@
 {
-  "name": "winston-loggly",
-  "version": "1.3.1",
+  "name": "winston-loggly-bulk",
+  "version": "3.0.0-rc1",
   "description": "A Loggly transport for winston",
-  "author": "Charlie Robbins <charlie.robbins@gmail.com>",
+  "author": "Loggly <opensource@loggly.com>",
+  "contributors": [
+    {
+      "name": "Loggly",
+      "email": "opensource@loggly.com",
+      "url": "https://github.com/loggly"
+    },
+    {
+      "name": "Shweta Jain",
+      "email": "shweta.jain@psquickit.com",
+      "url": "https://github.com/shwetajain148"
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/indexzero/winston-loggly.git"
+    "url": "https://github.com/loggly/winston-loggly-bulk.git"
   },
-  "keywords": ["logging", "sysadmin", "tools"],
+  "keywords": [
+    "loggly",
+    "logging",
+    "sysadmin",
+    "tools",
+    "winston"
+  ],
   "dependencies": {
-    "loggly": "~1.1.0"
+    "clone": "^2.1.1",
+    "node-loggly-bulk": "^2.0.1",
+    "winston": "^3.0",
+    "winston-transport": "^4.2.0"
   },
   "devDependencies": {
-    "winston": "1.0.x",
     "vows": "0.8.0"
   },
   "main": "./lib/winston-loggly",
-  "scripts": { "test": "vows --spec" },
-  "engines": { "node": ">= 0.8.0" }
+  "scripts": {
+    "test": "vows --spec"
+  },
+  "engines": {
+    "node": ">= 6.4.0"
+  }
 }
