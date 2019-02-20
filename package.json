@@ -1,6 +1,6 @@
 {
-  "name": "winston-loggly",
-  "version": "3.0.1",
+  "name": "@bwbr/winston-loggly",
+  "version": "3.0.0-beta.1",
   "description": "A Loggly transport for winston",
   "author": "Charlie Robbins <charlie.robbins@gmail.com>",
   "repository": {
